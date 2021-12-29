@@ -1,0 +1,23 @@
+{
+    "events": [
+        {
+            "timestamp": "{{ timestamp }}",
+            "rule": "Check image signature",
+            "priority": "warning",
+            "output": "The image signature verification failed for image {{ imagename }}",
+            "source": "Connaisseur AC",
+            "tags": [
+                "foo",
+                "bar"
+            ],
+            "output_fields": {
+                "field1": "value1",
+                "field2": "value2"
+            }
+        }
+    ],
+    "labels": {
+        "label1": "label1-value",
+        "label2": "label2-value"
+    }
+}
