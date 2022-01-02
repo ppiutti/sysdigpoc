@@ -1,5 +1,5 @@
 # sysdigpoc
-Image signing and validation integration tests with Sysdig, Connaisseur and Notary
+Image signing and validation and integration testing with Sysdig, Connaisseur and Notary
 
 This repository contains the YAML and JSON files required to enable the validation of signed, approved images in Kubernetes clusters through the Connaisseur Admission Controller.
 
@@ -22,7 +22,4 @@ c) set namespaced validation to enforce signature checking only on specific name
 d) send notifications to the Sysdig Secure UI when validation events happen
 
 
-The sysdig.json file is a customizable template that can be used to craft the notifications being sent to Sysdig Secure and it is referenced in the values.yaml file.
-
-Feel free to experiment - Perform these steps in a lab environment, not in production as you might accidentally break your cluster if something goes wrong.
-I do not consider myself responsible for any issue, you fly solo :)
+The sysdig.json file is a customizable template that can be used to craft the notifications being sent to Sysdig Secure and it is referenced in the values.yaml file. Further customization for the notification template can be achieved referencing to the Sysdig api/v1/eventsDispatch/ingest specification.
